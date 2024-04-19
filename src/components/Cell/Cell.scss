@@ -1,0 +1,21 @@
+.cell__app {
+    width: 150px;
+    height: 28px;
+    padding: 5px;
+    border: 1px solid grey; 
+
+    &:hover {
+        border-color: #ff7c20 !important; 
+        background-color: rgba(255, 186, 59, 0.31) !important; 
+    }
+
+    &:focus {
+        outline-color: #ff7c20; 
+        background-color: rgba(255, 186, 59, 0.06); 
+    }
+}
+
+.error{
+    border-color: rgba(255, 0, 0, 0.2) !important;
+    background-color: rgba(255, 0, 0, 0.05) !important;
+}

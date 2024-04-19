@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# React Table Management Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React application designed to manage a dynamic table with customizable columns and cells. It allows users to create, edit, and delete columns, populate cells with different data types, and validate mandatory cell entries.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+# Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Dynamic Column Creation: Users can add new columns to the table, specifying the column name, type (e.g., text, number, email, select, checkbox), and whether cells in the column are mandatory.
+* Cell Population: Depending on the column type, cells can be populated with various data types, including selectable options for "select" type columns.
+* Validation: Mandatory columns enforce cell completion, highlighting empty cells for users to fill.
+* Storage: Application state, including columns, cell data, and user configurations, is persisted using localStorage.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Components
 
-### `npm run build`
+1. "App"
+* Responsibilities:
+    * Manages overall application state, including columns, modal visibility, and error tracking.
+    * Renders the main layout with a header, dynamic columns, and modal for column creation.
+    * Provides functions to add and delete rows.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. "Header"
+* Responsibilities:
+	* Displays the application header with a logo and buttons for adding new columns and sending the table.
+	* Manages modal visibility to create new columns.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. "Modal"
+* Responsibilities:
+	* Renders a modal window for creating new columns.
+	* Manages form inputs for column name, type, and mandatory settings.
+	* Supports the addition of selectable options for "select" type columns.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. "Column"
+* Responsibilities:
+	* Represents a single column within the table.
+	* Handles column title editing and cell data manipulation.
+	* Provides functionality to delete the entire column.
 
-### `npm run eject`
+5. "Cell"
+* Responsibilities:
+	* Represents a single cell within a column, displaying based on its type (text, number, email, checkbox, select).
+	* Handles user input for cell values and checkbox toggles.
+	* Supports error highlighting for mandatory cells.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+6. "Empty"
+* Responsibilities:
+	* Renders a message when the table is empty, prompting users to add rows and input data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Usage
 
-## Learn More
+1. Adding Columns:
+	* Click "New columns" in the header to open the modal.
+	* Enter the column name, select the type, and set mandatory cell requirements.
+	* Optionally, provide selectable options for "select" type columns.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Managing Cells:
+	* Populate cells with appropriate data based on the column type.
+	* Mandatory columns will highlight empty cells for completion.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Deleting Columns:
+	* Click "Delete Column" within a column to remove it from the table.
 
-### Code Splitting
+4. Sending Table:
+	* Click "Send table" in the header to validate and send the completed table.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Technologies Used
 
-### Making a Progressive Web App
+* React: Frontend library for building dynamic user interfaces.
+* localStorage: Browser storage for persisting application state.
+* HTML/CSS: Structure and styling of components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Getting Started
+To run the project locally:
 
-### Deployment
+1. Clone the repository.
+2. Install dependencies using npm install.
+3. Start the development server with npm start.
+4. Open the application in your browser at http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Future Enhancements
 
-### `npm run build` fails to minify
+* Drag-and-Drop: Implement drag-and-drop functionality to reorder columns.
+* Sorting and Filtering: Add sorting and filtering options for column data.
+* User Authentication: Integrate user authentication to save personalized tables.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Contributors
+Creciun Dorin

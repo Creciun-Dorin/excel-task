@@ -1,0 +1,60 @@
+.modal__window__app {
+	width: 450px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 40px;
+	border-radius: 10px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+	input {
+		padding: 7px 14px;
+		border-radius: 10px;
+		outline: none;
+		border: 1px solid grey;
+	}
+
+	&__grup {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		&:nth-last-child(2){
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			gap: 15px;
+		}
+
+		&__select {
+			padding: 7px 14px;
+			border-radius: 10px;
+		}
+	}
+
+	.modal__select__option {
+
+		.select__option__list {
+			padding: 15px 0;
+		}
+
+		&__grup {
+			width: 100%;
+			height: 39.6px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			input {
+				flex: 1;
+				height: 100%;
+			}
+		}
+	}
+}

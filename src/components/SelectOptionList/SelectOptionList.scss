@@ -1,0 +1,16 @@
+.list__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__text {
+		/* Stiluri specifice pentru textul din listă */
+	}
+
+	&__grup {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		/* Alte stiluri pentru grupul din interiorul listei */
+	}
+}
